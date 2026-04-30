@@ -119,6 +119,56 @@
     }
     </script>
 
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Як записатися на прийом?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ви можете записатися за телефоном +38 (097) 699-53-84, через форму на сайті або через Helsi.me. Ми передзвонимо протягом 30 хвилин для підтвердження."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Чи потрібно укладати декларацію?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Декларація дозволяє отримувати безкоштовні консультації та аналізи. Ви можете укласти декларацію прямо в нас — це займе лише 10 хвилин."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Які аналізи можна здати в клініці?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ми пропонуємо широкий спектр аналізів: загальний аналіз крові та сечі, глюкоза, холестерин, вітамін D3, імуноглобулін Е, феритин. Для пацієнтів з декларацією багато аналізів безкоштовні."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Чи приймаєте дітей без декларації?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Так, ми приймаємо всіх пацієнтів. Консультації без декларації оплачуються окремо. Ціни доступні, точну вартість уточнюйте за телефоном."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Які вакцини ви пропонуєте?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ми маємо вакцини за календарем щеплень (бюджетні) та європейські вакцини преміум-класу. Перед вакцинацією обов'язковий огляд лікаря."
+                }
+            }
+        ]
+    }
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -342,6 +392,7 @@
         .service-card:hover {
             transform: translateY(-6px) translateZ(0);
             box-shadow: 0 16px 32px rgba(13, 148, 136, 0.12);
+            border-color: rgba(13, 148, 136, 0.2);
         }
 
         .service-icon {
@@ -495,7 +546,7 @@
         }
 
         .faq-item.open .faq-content {
-            max-height: 200px;
+            max-height: 500px;
         }
 
         /* Review cards - GPU accelerated */
@@ -532,6 +583,11 @@
 
         .team-card:hover {
             transform: translateY(-4px) translateZ(0);
+        }
+
+        /* Service card icon subtle color on hover */
+        .service-card:hover .service-icon {
+            background-color: rgba(13, 148, 136, 0.15);
         }
     </style>
 </head>
@@ -920,7 +976,7 @@
     </section>
 
     <!-- Advantages Section -->
-    <section class="py-16 bg-primary">
+    <section class="py-12 md:py-16 bg-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                 <!-- Advantage 1 -->
@@ -931,7 +987,7 @@
                         </svg>
                     </div>
                     <h3 class="font-display text-xl text-white mb-2" data-i18n="adv.1.title">Сучасне обладнання</h3>
-                    <p class="text-white/70 text-sm" data-i18n="adv.1.text">Новітня діагностична техніка провідних світових виробників</p>
+                    <p class="text-white/90 text-sm" data-i18n="adv.1.text">Новітня діагностична техніка провідних світових виробників</p>
                 </div>
 
                 <!-- Advantage 2 -->
@@ -942,7 +998,7 @@
                         </svg>
                     </div>
                     <h3 class="font-display text-xl text-white mb-2" data-i18n="adv.2.title">Досвідчені лікарі</h3>
-                    <p class="text-white/70 text-sm" data-i18n="adv.2.text">Команда кваліфікованих спеціалістів з багаторічним досвідом</p>
+                    <p class="text-white/90 text-sm" data-i18n="adv.2.text">Команда кваліфікованих спеціалістів з багаторічним досвідом</p>
                 </div>
 
                 <!-- Advantage 3 -->
@@ -953,7 +1009,7 @@
                         </svg>
                     </div>
                     <h3 class="font-display text-xl text-white mb-2" data-i18n="adv.3.title">Зручний графік</h3>
-                    <p class="text-white/70 text-sm" data-i18n="adv.3.text">Пн-Пт 08:30-19:00, Сб 09:00-14:00 — для вашої зручності</p>
+                    <p class="text-white/90 text-sm" data-i18n="adv.3.text">Пн-Пт 08:30-19:00, Сб 09:00-14:00 — для вашої зручності</p>
                 </div>
 
                 <!-- Advantage 4 -->
@@ -964,14 +1020,14 @@
                         </svg>
                     </div>
                     <h3 class="font-display text-xl text-white mb-2" data-i18n="adv.4.title">Індивідуальний підхід</h3>
-                    <p class="text-white/70 text-sm" data-i18n="adv.4.text">Персональна увага до кожного пацієнта та його потреб</p>
+                    <p class="text-white/90 text-sm" data-i18n="adv.4.text">Персональна увага до кожного пацієнта та його потреб</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 md:py-24 lg:py-32 bg-surface">
+    <section id="services" class="py-16 md:py-20 lg:py-28 bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -990,9 +1046,11 @@
             <!-- Services Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 stagger-children">
                 <!-- Service 1 -->
-                <div class="service-card reveal bg-white rounded-2xl p-8 border border-slate-100">
-                    <div class="service-icon w-16 h-16 bg-surface rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-3xl">🩺</span>
+                <div class="service-card reveal bg-white rounded-2xl p-8 border border-slate-100 hover:border-primary/30">
+                    <div class="service-icon w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
                     </div>
                     <h3 class="font-display text-xl text-charcoal mb-3" data-i18n="service.1.title">Огляд і консультація</h3>
                     <p class="text-slate-600 mb-6" data-i18n="service.1.text">
@@ -1007,9 +1065,11 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="service-card reveal bg-white rounded-2xl p-8 border border-slate-100">
-                    <div class="service-icon w-16 h-16 bg-surface rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-3xl">📋</span>
+                <div class="service-card reveal bg-white rounded-2xl p-8 border border-slate-100 hover:border-primary/30">
+                    <div class="service-icon w-16 h-16 bg-teal-50 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                        </svg>
                     </div>
                     <h3 class="font-display text-xl text-charcoal mb-3" data-i18n="service.2.title">Профогляди</h3>
                     <p class="text-slate-600 mb-6" data-i18n="service.2.text">
@@ -1024,9 +1084,11 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="service-card reveal bg-white rounded-2xl p-8 border border-slate-100">
-                    <div class="service-icon w-16 h-16 bg-surface rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-3xl">🔬</span>
+                <div class="service-card reveal bg-white rounded-2xl p-8 border border-slate-100 hover:border-primary/30">
+                    <div class="service-icon w-16 h-16 bg-cyan-50 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
                     </div>
                     <h3 class="font-display text-xl text-charcoal mb-3" data-i18n="service.3.title">УЗД-діагностика</h3>
                     <p class="text-slate-600 mb-6" data-i18n="service.3.text">
@@ -1041,9 +1103,11 @@
                 </div>
 
                 <!-- Service 4 -->
-                <div class="service-card reveal bg-white rounded-2xl p-8 border border-slate-100">
-                    <div class="service-icon w-16 h-16 bg-surface rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-3xl">🧪</span>
+                <div class="service-card reveal bg-white rounded-2xl p-8 border border-slate-100 hover:border-primary/30">
+                    <div class="service-icon w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                        </svg>
                     </div>
                     <h3 class="font-display text-xl text-charcoal mb-3" data-i18n="service.4.title">Лабораторна діагностика</h3>
                     <p class="text-slate-600 mb-6" data-i18n="service.4.text">
@@ -1058,9 +1122,11 @@
                 </div>
 
                 <!-- Service 5 -->
-                <div class="service-card reveal bg-white rounded-2xl p-8 border border-slate-100">
-                    <div class="service-icon w-16 h-16 bg-surface rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-3xl">💉</span>
+                <div class="service-card reveal bg-white rounded-2xl p-8 border border-slate-100 hover:border-primary/30">
+                    <div class="service-icon w-16 h-16 bg-sky-50 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
                     </div>
                     <h3 class="font-display text-xl text-charcoal mb-3" data-i18n="service.5.title">Вакцинація</h3>
                     <p class="text-slate-600 mb-6" data-i18n="service.5.text">
@@ -1075,9 +1141,11 @@
                 </div>
 
                 <!-- Service 6 -->
-                <div class="service-card reveal bg-white rounded-2xl p-8 border border-slate-100">
-                    <div class="service-icon w-16 h-16 bg-surface rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-3xl">💆</span>
+                <div class="service-card reveal bg-white rounded-2xl p-8 border border-slate-100 hover:border-primary/30">
+                    <div class="service-icon w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"></path>
+                        </svg>
                     </div>
                     <h3 class="font-display text-xl text-charcoal mb-3" data-i18n="service.6.title">Дитячий реабілітаційний масаж</h3>
                     <p class="text-slate-600 mb-6" data-i18n="service.6.text">
@@ -1893,13 +1961,13 @@
                     <p class="text-slate-400 mb-6 max-w-md" data-i18n="footer.description">
                         Сучасна клініка сімейної медицини в Калуші. Професійний догляд для всієї родини.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors" aria-label="Facebook">
+                    <div class="flex gap-4 hidden" id="footer-socials">
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors" aria-label="Facebook" id="footer-facebook">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                             </svg>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors" aria-label="Instagram">
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors" aria-label="Instagram" id="footer-instagram">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                             </svg>
@@ -1935,7 +2003,7 @@
 
             <!-- Bottom -->
             <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-slate-400 text-sm" data-i18n="footer.copy">&copy; 2025 Сімейна клініка Св. Пантелеймона. Всі права захищені.</p>
+                <p class="text-slate-400 text-sm" data-i18n="footer.copy">&copy; 2026 Сімейна клініка Св. Пантелеймона. Всі права захищені.</p>
                 <a href="#" class="text-slate-400 hover:text-white text-sm transition-colors" data-i18n="footer.privacy">Політика конфіденційності</a>
             </div>
         </div>
@@ -2169,7 +2237,7 @@
                 'footer.description': 'Сучасна клініка сімейної медицини в Калуші. Професійний догляд для всієї родини.',
                 'footer.nav': 'Навігація',
                 'footer.contact': 'Контакти',
-                'footer.copy': '© 2025 Сімейна клініка Св. Пантелеймона. Всі права захищені.',
+                'footer.copy': '© 2026 Сімейна клініка Св. Пантелеймона. Всі права захищені.',
                 'footer.privacy': 'Політика конфіденційності',
 
                 // Reviews
@@ -2331,7 +2399,7 @@
                 'footer.description': 'Modern family medicine clinic in Kalush. Professional care for the whole family.',
                 'footer.nav': 'Navigation',
                 'footer.contact': 'Contact',
-                'footer.copy': '© 2025 St. Panteleimon Family Clinic. All rights reserved.',
+                'footer.copy': '© 2026 St. Panteleimon Family Clinic. All rights reserved.',
                 'footer.privacy': 'Privacy Policy',
 
                 // Reviews
@@ -2508,19 +2576,6 @@
         // Close mobile menu when clicking on links
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMobileMenu);
-        });
-
-        // ==========================================
-        // LANGUAGE SWITCHER EVENTS
-        // ==========================================
-        document.getElementById('lang-uk').addEventListener('click', () => switchLanguage('uk'));
-        document.getElementById('lang-en').addEventListener('click', () => switchLanguage('en'));
-
-        document.querySelectorAll('.lang-uk-mobile').forEach(btn => {
-            btn.addEventListener('click', () => switchLanguage('uk'));
-        });
-        document.querySelectorAll('.lang-en-mobile').forEach(btn => {
-            btn.addEventListener('click', () => switchLanguage('en'));
         });
 
         // ==========================================
