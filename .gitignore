@@ -19,3 +19,7 @@ build/
 # Environment
 .env
 .env.local
+
+# Local tooling
+.claude/
+test-results/
