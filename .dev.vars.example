@@ -1,0 +1,6 @@
+# Скопіюйте в .dev.vars (не комітиться) для локальної розробки: npx wrangler pages dev .
+TG_BOT_TOKEN=123456:ABC-your-token
+TG_CHAT_ID=-1001234567890
+TG_WEBHOOK_SECRET=random-string
+# DRY_RUN=1 — не слати в Telegram, лише логувати виклики
+DRY_RUN=1
