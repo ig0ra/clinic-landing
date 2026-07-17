@@ -1,0 +1,7 @@
+name = "kalush-med"
+compatibility_date = "2026-07-01"
+pages_build_output_dir = "."
+
+[[kv_namespaces]]
+binding = "KV"
+id = "7ef0204166884ed0afcb8e5ae677eaa5"
