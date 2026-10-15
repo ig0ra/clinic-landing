@@ -819,44 +819,41 @@
                     fetchpriority="high"
                 >
             </div>
-            <!-- Slide 2 -->
+            <!-- Slide 2: триптих на широких екранах, одиночне фото на вузьких -->
             <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-                <img
-                    src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=1920&q=80"
-                    alt="Лікар з пацієнтом"
-                    class="w-full h-full object-cover"
-                    loading="lazy"
-                >
+                <picture class="block w-full h-full">
+                    <source media="(min-width: 1024px)" srcset="hero-clinic.jpg">
+                    <img
+                        src="hero-clinic-m.jpg"
+                        alt="Команда клініки біля входу з вивіскою Сімейної клініки Св. Пантелеймона"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                    >
+                </picture>
             </div>
-            <!-- Slide 3 -->
+            <!-- Slide 3: триптих на широких екранах, одиночне фото на вузьких -->
             <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-                <img
-                    src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1920&q=80"
-                    alt="Інтер'єр медичного кабінету"
-                    class="w-full h-full object-cover"
-                    loading="lazy"
-                >
-            </div>
-            <!-- Slide 4 -->
-            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
-                <img
-                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1920&q=80"
-                    alt="Медична консультація"
-                    class="w-full h-full object-cover"
-                    loading="lazy"
-                >
+                <picture class="block w-full h-full">
+                    <source media="(min-width: 1024px)" srcset="hero-diagnostics.jpg">
+                    <img
+                        src="hero-diagnostics-m.jpg"
+                        alt="Діагностика в клініці: ЕКГ, лабораторія, УЗД"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                    >
+                </picture>
             </div>
             <!-- Overlay gradient -->
             <div class="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/40 z-10"></div>
-            <!-- Slider indicators -->
-            <div class="absolute bottom-24 left-1/2 -translate-x-1/2 z-30 flex gap-2" id="slider-dots">
-                <button class="slider-dot w-3 h-3 rounded-full bg-white/80 transition-all" data-slide="0" aria-label="Слайд 1"></button>
-                <button class="slider-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all" data-slide="1" aria-label="Слайд 2"></button>
-                <button class="slider-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all" data-slide="2" aria-label="Слайд 3"></button>
-                <button class="slider-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all" data-slide="3" aria-label="Слайд 4"></button>
-            </div>
             <!-- Decorative overlay pattern -->
             <div class="absolute inset-0 opacity-5 z-20" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+
+        <!-- Slider indicators -->
+        <div class="absolute bottom-10 md:bottom-24 left-1/2 -translate-x-1/2 z-40 flex gap-2" id="slider-dots">
+            <button class="slider-dot w-3 h-3 rounded-full bg-white/80 transition-all" data-slide="0" aria-label="Слайд 1"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all" data-slide="1" aria-label="Слайд 2"></button>
+            <button class="slider-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white/50 transition-all" data-slide="2" aria-label="Слайд 3"></button>
         </div>
 
         <!-- Content -->
@@ -1677,8 +1674,8 @@
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
-                <!-- Contact Info -->
-                <div class="reveal">
+                <!-- Contact Info + Entrance photo -->
+                <div class="reveal flex flex-col gap-6">
                     <div class="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-slate-100">
                         <!-- Address -->
                         <div class="flex gap-3 sm:gap-4 mb-6 sm:mb-8">
@@ -1744,6 +1741,18 @@
                             </div>
                         </div>
                         -->
+                    </div>
+
+                    <div class="relative bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100">
+                        <img
+                            src="contact-entrance.jpg"
+                            alt="Вхід до Сімейної клініки Св. Пантелеймона з вивіскою"
+                            class="w-full aspect-[3/2] object-cover"
+                            loading="lazy"
+                        >
+                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/70 to-transparent px-5 py-4">
+                            <p class="text-white text-sm font-medium" data-i18n="contacts.entrance">Вхід до клініки — шукайте вивіску біля сходів</p>
+                        </div>
                     </div>
                 </div>
 
@@ -2184,6 +2193,7 @@
                 'contacts.badge': 'Контакти',
                 'contacts.title': 'Як нас знайти',
                 'contacts.subtitle': 'Ми завжди раді бачити вас у нашій клініці. Зв\'яжіться з нами будь-яким зручним способом',
+                'contacts.entrance': 'Вхід до клініки — шукайте вивіску біля сходів',
                 'contacts.address.title': 'Адреса',
                 'contacts.address.value': 'вул. Біласа Данилишина 6/36, м. Калуш, Івано-Франківська обл.',
                 'contacts.phone.title': 'Телефон',
@@ -2329,6 +2339,7 @@
                 'contacts.badge': 'Contacts',
                 'contacts.title': 'How to Find Us',
                 'contacts.subtitle': 'We are always happy to see you at our clinic. Contact us in any convenient way',
+                'contacts.entrance': 'Clinic entrance — look for the sign by the stairs',
                 'contacts.address.title': 'Address',
                 'contacts.address.value': '6/36 Bilasa Danylyshyna St., Kalush, Ivano-Frankivsk region',
                 'contacts.phone.title': 'Phone',

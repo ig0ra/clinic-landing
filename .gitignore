@@ -24,6 +24,9 @@ build/
 .claude/
 test-results/
 
+# Вихідні фото від клієнта (діти без згоди батьків, скани документів) — не деплоїти
+client-photos/
+
 # Cloudflare
 .dev.vars
 .wrangler/
