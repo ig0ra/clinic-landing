@@ -88,7 +88,7 @@ Landing page для приватної медичної клініки "Сіме
 - [x] Telegram-бот (код): `functions/api/telegram.js` — запис-діалог, інфо-меню, міст «питання лікарю», кнопка «Опрацьовано». Деталі та інструкція деплою: TELEGRAM_BOT.md. Тести: `node tests/bot-smoke.mjs`; локально: `npx wrangler pages dev . --kv KV` (порт 8788/8789)
 - [x] Бот запущений: @panteleimon_clinic_bot, група «Заявки. Клініка Св. Пантелеймона» (chat_id -5574099114), webhook → https://kalush-med.pages.dev/api/telegram. УВАГА: група звичайна (не supergroup) — якщо мігрує в supergroup, chat_id зміниться, треба буде оновити секрет TG_CHAT_ID
 - [x] Плаваюча TG-кнопка веде на @panteleimon_clinic_bot
-- [x] Хостинг: Cloudflare Pages, проєкт `kalush-med` → https://kalush-med.pages.dev (деплой: `npx wrangler pages deploy . --project-name kalush-med --branch main`). Секрети залиті, KV binding `KV` (id у wrangler.toml). Акаунт: forever.evil.okda@gmail.com
+- [x] Хостинг: Cloudflare Pages, проєкт `kalush-med` → https://kalush-med.pages.dev (деплой: `./scripts/build-dist.sh && npx wrangler pages deploy dist --project-name kalush-med --branch main` — ТІЛЬКИ dist/, деплой `.` злив .dev.vars). Секрети залиті, KV binding `KV` (id у wrangler.toml). Акаунт: forever.evil.okda@gmail.com
 - [ ] Домен — зареєструвати kalush-med.com.ua і підключити до Pages-проєкту
 - [ ] Аватарка бота — /setuserpic у BotFather з logo.png (опційно)
 - [ ] Google Business профіль — існує й актуальний (успадкований від «Кабінет Педіатра»); варто отримати доступ власника

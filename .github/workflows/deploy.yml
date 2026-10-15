@@ -17,9 +17,12 @@ jobs:
       - name: Смоук-тести бота і форми
         run: node tests/bot-smoke.mjs
 
+      - name: Збірка dist/ (лише публічні файли)
+        run: ./scripts/build-dist.sh
+
       - name: Деплой на Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy . --project-name kalush-med --branch main
+          command: pages deploy dist --project-name kalush-med --branch main

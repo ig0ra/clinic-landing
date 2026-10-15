@@ -1,6 +1,6 @@
 name = "kalush-med"
 compatibility_date = "2026-07-01"
-pages_build_output_dir = "."
+pages_build_output_dir = "dist"
 
 [[kv_namespaces]]
 binding = "KV"
